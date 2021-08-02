@@ -11,17 +11,85 @@
 <body>
   <h3>JS Tasks</h3>
   <ul>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/common/string-filtering.js">Фильтрация строки</a></li>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/common/object-selection.js">Выборка объекта</a></li>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/common/string-analyzing.js">Анализ строки</a></li>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/common/array-filtering.js">Фильтрация массива</a></li>
+    <li><a target="_blank" href="./common/string-filtering.js">Фильтрация строки</a>
+      <pre>
+  const string = "Привет! Как дела?";
+  
+  const vowels = ['ё', 'у', 'е', 'ы', 'а', 'о', 'э', 'я', 'и', 'ю'];
+  
+  const getVowels = stringToFilter => {
+    let extractedVowels = "";
+    for (i = 0; i < stringToFilter.length; i++) {
+      const currentLetter = stringToFilter[i].toLowerCase();
+      if (vowels.includes(currentLetter)) {
+        extractedVowels += currentLetter;
+      }
+    }
+    return extractedVowels;
+  };
+
+  console.log(getVowels(string));</pre>
+    </li>
+    <li><a target="_blank" href="./common/object-selection.js">Выборка объекта</a>
+      <pre>const workers = [
+          { "name": "John", "salary": 500 },
+          { "name": "Mike", "salary": 1300 },
+          { "name": "Linda", "salary": 1500 }
+        ];
+        
+        const getWorthyWorkers = (workersArr) => {
+          const worthyWorkers = [];
+          workersArr.forEach(currentWorker => {
+            if (currentWorker.salary > 1000) {
+              worthyWorkers.push(currentWorker.name);
+            }
+          });
+        
+          return worthyWorkers;
+        }
+        console.log(getWorthyWorkers(workers));</pre>
+    </li>
+    <li><a target="_blank" href="./common/string-analyzing.js">Анализ строки</a>
+      <pre>const path = "/users/download/index.html";
+
+          const isHtml = path => {
+            requiredExt = ".html";
+            const pathExt = path.slice(-5);
+            return pathExt == requiredExt;
+          }
+          
+          console.log(isHtml(path));</pre>
+    </li>
+    <li><a target="_blank" href="./common/array-filtering.js">Фильтрация массива</a>
+      <pre>const mixedArray = [3, 13, 74, 14, 66, 15, 22, 4];
+          const isEven = num => {
+            return num % 2 == 0;
+          };
+          const filterArray = (arrayToFilter, filterFn) => {
+            const filteredArray = [];
+            arrayToFilter.forEach(num => {
+              if (filterFn(num)) {
+                filteredArray.push(num);
+              }
+            })
+            return filteredArray;
+          };
+          
+          console.log(filterArray(mixedArray, isEven));</pre>
+    </li>
   </ul>
   <h3>DOM Tasks</h3>
   <ul>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/dom/slider/slider.html">Простой слайдер</a></li>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/dom/modal/modal.html">Модальное окно</a></li>
-    <li><a target="_blank" href="https://asm96.github.io/java-script/dom/blocks/blocks.html">Создание и работа с DOM</a></li>
+    <li><a target="_blank" href="./dom/slider/slider.html">Простой слайдер</a></li>
+    <li><a target="_blank" href="./dom/modal/modal.html">Модальное окно</a></li>
+    <li><a target="_blank" href="./dom/blocks/blocks.html">Создание и работа с
+        DOM</a>
+    </li>
   </ul>
+  <script src="./common/string-filtering.js"></script>
+  <script src="./common/object-selection.js"></script>
+  <script src="./common/string-analyzing.js"></script>
+  <script src="./common/array-filtering.js"></script>
 </body>
 
 </html>
