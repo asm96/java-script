@@ -5,5 +5,5 @@ const isHtml = path => {
   const pathExt = path.slice(-5);
   return pathExt == requiredExt;
 }
-
+console.log('Анализ строки');
 console.log(isHtml(path));

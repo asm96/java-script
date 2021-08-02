@@ -12,5 +12,5 @@ const getVowels = stringToFilter => {
   }
   return extractedVowels;
 };
-
+console.log('Фильтрация строки');
 console.log(getVowels(string));

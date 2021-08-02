@@ -14,4 +14,5 @@ const getWorthyWorkers = (workersArr) => {
 
   return worthyWorkers;
 }
+console.log('Выборка объекта');
 console.log(getWorthyWorkers(workers));

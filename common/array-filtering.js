@@ -11,5 +11,5 @@ const filterArray = (arrayToFilter, filterFn) => {
   })
   return filteredArray;
 };
-
+console.log('Фильтрация массива');
 console.log(filterArray(mixedArray, isEven));
